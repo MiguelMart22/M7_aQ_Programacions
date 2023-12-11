@@ -1,6 +1,6 @@
-# Nombre del Proyecto
+# aQ Programacions
 
-Descripción concisa del proyecto.
+aQ Programacions Laravel es un proyecto basado en Laravel que proporciona una interfaz para visualizar estadísticas de diversas criptomonedas. La aplicación utiliza datos provenientes de las API de CoinMarketCap y CoinGecko para ofrecer información precisa y actualizada sobre el mercado de criptomonedas.
 
 ## Requisitos del Sistema
 
