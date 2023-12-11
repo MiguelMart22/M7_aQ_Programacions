@@ -12,7 +12,7 @@ Asegúrate de tener instaladas las siguientes herramientas antes de comenzar:
 
 ## Instalación
 
-1. Clona el repositorio: `git clone https://github.com/tuusuario/tuproyecto.git`
+1. Clona el repositorio: `git clone https://github.com/MiguelMart22/M7_aQ_Programacions.git`
 2. Navega al directorio del proyecto: `cd tuproyecto`
 3. Instala las dependencias de PHP: `composer install`
 4. Copia el archivo de configuración: `cp .env.example .env`
