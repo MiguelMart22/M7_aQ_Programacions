@@ -1,47 +1,95 @@
-# aQ Programacions
+# aQ. Professor assistent - README del Projecte
 
-aQ Programacions Laravel es un proyecto basado en Laravel que proporciona una interfaz para visualizar estadísticas de diversas criptomonedas. La aplicación utiliza datos provenientes de las API de CoinMarketCap y CoinGecko para ofrecer información precisa y actualizada sobre el mercado de criptomonedas.
+## Descripció del Projecte
 
-## Requisitos del Sistema
+Aquest projecte, anomenat "aQ. Professor assistent", té com a objectiu desenvolupar una aplicació web utilitzant PHP, MySQL i el framework Laravel. L'aplicació està dissenyada per ajudar els professors en l'organització i gestió de les seves Programacions Didàctiques, que inclouen Unitats Formatives (UF), Resultats d'Aprenentatge (RA), criteris d'avaluació i continguts.
 
-Asegúrate de tener instaladas las siguientes herramientas antes de comenzar:
-- PHP (versión 8.0.1)
-- Composer
-- Node.js y NPM
-- ...
+## Objectius del Projecte
 
-## Instalación
+1. **Sistema de Login**: Implementació d'un sistema d'autenticació per a professors i administradors.
+2. **Gestió de Programacions Didàctiques**: Capacitat per crear, modificar i eliminar programacions.
+3. **Gestió de Unitats Formatives (UF)**: Funcionalitat per a l'administració de les UF, incloent la creació, modificació i eliminació.
+4. **Gestió de Resultats d'Aprenentatge (RA)**: Eines per a gestionar els RA dins de cada UF, incloent l'addició, modificació i eliminació dels criteris d'avaluació i continguts associats.
+5. **Rols d'Usuari**: Diferenciació entre rols d'usuari: professor i administrador.
+6. **Vista d'Administrador**: Capacitat de l'administrador per veure, crear, modificar i eliminar totes les programacions i els seus components.
+7. **L’administrador pot crear un Mòdul amb els seus RA, Criteris i Continguts**.
+8. **El professor pot crear una programació del mòdul, afegir activitats**.
+9. **S’ha de validar que totes les activitats de cada UF sumen el nombre d’hores correctes**.
 
-1. Clona el repositorio: `git clone https://github.com/MiguelMart22/M7_aQ_Programacions.git`
-2. Navega al directorio del proyecto: `cd tuproyecto`
-3. Instala las dependencias de PHP: `composer install`
-4. Copia el archivo de configuración: `cp .env.example .env`
-5. Genera la clave de la aplicación: `php artisan key:generate`
-6. Configura tu base de datos en el archivo `.env`
-7. Ejecuta las migraciones: `php artisan migrate`
-8. Instala las dependencias de JavaScript: `npm install` o `yarn install`
-9. Compila los activos: `npm run dev` o `yarn dev`
+## Requeriments Tècnics
 
-## Uso
+- **Frontend**: Interfície d'usuari clara i responsiva.
+- **Backend**: PHP i Laravel per a la lògica de l'aplicació.
+- **Base de Dades**: MySQL per emmagatzemar dades de programacions, UF, RA, criteris d'avaluació i continguts.
+- **Seguretat**: Implementació de mesures de seguretat per a protegir les dades d'usuari i el contingut de l'aplicació.
 
-Describe cómo usar tu aplicación una vez que esté instalada. Proporciona ejemplos si es posible.
+## Diagrama de Classes
 
-## Contribución
+El projecte s'organitza utilitzant les següents classes:
 
-Si deseas contribuir al proyecto, sigue estos pasos:
-1. Haz un fork del proyecto.
-2. Crea una nueva rama: `git checkout -b tu-rama`
-3. Realiza tus cambios y haz commits: `git commit -m 'Descripción de tus cambios'`
-4. Haz un push a la rama: `git push origin tu-rama`
-5. Abre un pull request en GitHub.
+1. **Classe `Usuari`**: Representa els usuaris del sistema (professors i administradors).
+2. **Classe `Mòdul`**: Representa una assignatura.
+3. **Classe `UF` (Unitat Formativa)**: Defineix una unitat formativa dins d'un mòdul.
+4. **Classe `RA` (Resultat d'Aprenentatge)**: Detalla els resultats d'aprenentatge per a cada UF.
+5. **Classe `Criteri`**: Especifica els criteris d'avaluació per a cada RA.
+6. **Classe `Contingut`**: Defineix els continguts associats a cada RA.
+7. **Classe `Programació`**: Representa una programació didàctica completa.
+8. **Classe `Activitat`**: Representa una activitat feta a classe.
 
-## Problemas Comunes
+## Guia de Desplegament (Deployment)
 
-Lista problemas comunes y sus soluciones si es posible.
+### Requisits Previs
 
-## Contacto
+- PHP instal·lat al teu servidor.
+- Composer instal·lat per gestionar les dependències de Laravel.
+- MySQL per a la base de dades.
 
-- Autor: Miguel Martinez Gimenez
-- Email: miguel.martinez35j@gmail.com
+### Passos per al Desplegament
 
-¡Gracias por contribuir!
+1. Clona el repositori des de GitHub:
+
+    ```bash
+    git clone https://github.com/oriolmiro/programacions.git
+    ```
+
+2. Accedeix al directori del projecte:
+
+    ```bash
+    cd programacions
+    ```
+
+3. Instal·la les dependències de Laravel amb Composer:
+
+    ```bash
+    composer install
+    ```
+
+4. Copia l'arxiu de configuració i configura el teu entorn:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+    Edita l'arxiu `.env` amb la configuració de la teva base de dades i altres detalls.
+
+5. Genera la clau d'aplicació de Laravel:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+6. Executa les migracions per crear les taules a la base de dades:
+
+    ```bash
+    php artisan migrate
+    ```
+
+7. Inicia el servidor de desenvolupament:
+
+    ```bash
+    php artisan serve
+    ```
+
+8. Accedeix a l'aplicació al teu navegador: [http://localhost:8000](http://localhost:8000)
+
+Ara hauries de tenir l'aplicació desplegada i preparada per a la seva utilització.
